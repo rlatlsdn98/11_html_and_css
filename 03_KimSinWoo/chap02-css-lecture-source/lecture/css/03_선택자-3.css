@@ -1,0 +1,100 @@
+/* 일반 구조 선택자 */
+
+/* 선택자:first-child
+    - 형제 관계 요소 중 첫 번째 요소가 선택자와 맞는가
+*/
+#test1 > p:first-child {
+    background-color: red;
+}
+
+#test1 > pre:last-child {
+    background-color: green;
+}
+
+/* 선택자:nth-child(n)
+    - 형제 관계 요소 중 n번째 요소가 선택자와 맞는가
+*/
+#test1 > p:nth-child(3) {
+    background-color: blueviolet;
+}
+
+/* 수열 형태로 지정 가능
+    n = 0 부터 1씩 증가하는 자연수
+*/
+#test1 > p:nth-child(2n) { /* 짝수 번째 p태그 인 경우 */
+    font-style: italic;
+    font-weight: bold;
+}
+
+#test1 > p:nth-child(2n+1) {
+    font-size: 24px;
+}
+
+/* 형태 구조 선택자 */
+
+/* 선택자:first-of-type
+    -> 선택된 요소들 중 첫번째 요소만 선택
+*/
+#test2 > p:first-of-type {
+    background-color: red;
+}
+
+/* 선택자:last-of-type
+    -> 선택된 요소들 중 마지막 요소만 선택
+*/
+#test2 > p:last-of-type {
+    background-color: orange;
+}
+
+/* 선택자:nth-of-type
+    -> 선택된 형제관계 요소들 중 n번째 요소만 선택
+*/
+#test2 > p:nth-of-type(3) {
+    background-color: green;
+}
+
+#test2 > p:nth-of-type(2n) {
+    background-color: blue;
+}
+
+/* 부정 선택자 (:not) */
+#test3 > li:nth-child(3n) {
+    background-color: pink;
+}
+
+#test3 > li:not(:nth-child(3n)) {
+    background-color: yellow;
+}
+
+/* 문자 선택자 */
+#test4 > p:first-letter { /* 첫 글자 */
+    font-size: 2em; /* 2배 */
+    font-weight: bold;
+}
+
+#test4 > p:first-line { /* 첫 번째 줄 */
+    background-color: coral;
+}
+
+/* :before / :after 가상 선택자를 이용해서 CSS로 HTML에 내용 추가하기 */
+#test4 > p:before {
+    content: "👍👍👍👍👍👍"
+}
+#test4 > p:after {
+    content: "🏆🏆🏆🏆🏆🏆"
+}
+
+/* :selection -> 드래그로 블럭 친 상태 */
+#test4 > p::selection {
+    background-color: yellowgreen;
+}
+
+/* 증가하는 숫자 지정 */
+#test4 > p {
+                      /*변수명*/
+    counter-increment: count 1;
+}
+
+#test4 > p:before {
+    content: counter(count);
+}

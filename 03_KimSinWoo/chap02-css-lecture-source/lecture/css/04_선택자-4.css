@@ -1,0 +1,23 @@
+/* 1순위 : !important */
+.test2 {
+    background-color: chocolate !important;
+}
+
+/* 3순위 : 아이디 선택자 */
+#test2 {
+    background-color: plum;
+    width: 200px;
+    height: 200px;
+}
+/* 4순위 : 클래스 선택자 */
+.test1{
+    background-color: yellow;
+    color: white;
+}
+
+/* 5순위 : 태그 선택자 */
+div {
+    width: 300px;
+    height: 300px;
+    background-color: darkblue;
+}

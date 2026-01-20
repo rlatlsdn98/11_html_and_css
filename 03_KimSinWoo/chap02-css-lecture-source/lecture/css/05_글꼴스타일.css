@@ -1,0 +1,116 @@
+/* 글꼴 변경 하기 */
+#ff1 {
+    font-family: "궁서";
+}
+
+/* ~~체: Monospace(고정된 글자 폭) */
+#ff2 {
+    font-family: "궁서체";
+}
+
+/* 여러 글꼴을 작성하여 앞쪽 글꼴이 없으면 뒤쪽 글꼴을 적용 */
+ff3 {
+    font-family: "짱구엄마체","굴림","돋움";
+}
+
+/* 웹 폰트 */
+@font-face {
+    font-family: 'Shilla';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/Shilla_CultureM-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Shilla';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/Shilla_CultureB-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+
+#ff4 {
+    font-family: "Shilla";
+}
+
+#ff5 {
+    font-family: "Playwrite GB J Guides", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#ff5 {
+    font-family: "Playwrite GB J Guides", cursive;
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+/* font-size : 글꼴 크기 */
+#size1 {
+    font-size: 32px; /* 브라우저 기본 폰트 == 16px */
+}
+
+#size2{
+    /* em : 부모 요소의 font-size 비례한 크기를 지정*/
+    font-size: 2em; /* 부모 16픽셀 2배 */
+}
+
+#size3{
+    /* em : 부모 요소의 font-size 비례한 크기(%)를 지정*/
+    font-size: 200%;
+}
+
+#size4{
+    /* 1pt == 1/72 inch */
+    font-size: 18pt;
+}
+
+/*:root {*/
+/*    font-size: 10px;*/
+/*    --main-color: yellow; !* 변수 선언 *!*/
+/*}*/
+
+#size5 {
+    /* rem: :root에 정의된 font-size에 대해 비례한 단위 */
+    font-size: 3rem; /* 10px * 3*/
+    /*background-color: var( --main-color);*/
+}
+
+/* 글꼴 두께 지정 스타일 */
+#fw1 {
+    font-weight: bold;
+}
+
+#fw2 {
+    font-weight: lighter;
+}
+
+#fw3 {
+    font-weight: 500;
+}
+
+/* 작은 대문자로 변경 */
+#fv {
+    font-variant: small-caps;
+}
+
+/* 기울임 글꼴 */
+#fs1 {
+    /* 폰트 내 기울어진 글자 이미지 불러오기 */
+    font-style: italic;
+}
+
+#fs2 {
+    /* 정상 글자를 시스템이 억지로 기울이는 것 */
+    font-style: oblique;
+}
+
+/* 폰트 속성을 이용한 일괄 설정 */
+#f1 {
+    font : 48px "궁서체";
+}
+
+#f2 {
+    font: italic bold 25px/50px "굴림";
+}
