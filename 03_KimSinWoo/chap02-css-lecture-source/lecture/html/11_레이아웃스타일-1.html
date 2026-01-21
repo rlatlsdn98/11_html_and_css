@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>11_레이아웃스타일-1</title>
+    <link rel="stylesheet" href="../css/11_레이아웃스타일-1.css">
+</head>
+<body>
+
+    <h1>레이아웃 스타일</h1>
+    <pre>
+        Layout
+        - 사전적 의미: 배치, 정리
+        - 기술적 의미: 화면 구성 요소를 제한된 공간에 효율적으로 배치하는 것
+    </pre>
+
+    <h3>width(폭,너비,가로) / height(높이, 세로)</h3>
+    <h4>고정 크기</h4>
+    <div id="test1" class="size-test">
+    </div>
+
+    <h4>가변 크기</h4>
+    <div id="test2" class="size-test">
+    </div>
+
+    <hr>
+
+    <h3>화면 배치(표시) 방법 변경 - display </h3>
+
+    <p>블럭 요소와 인라인 요소의 속성을 변경하여 배치 방식을 변경할 수 있다.</p>
+    <h4>블럭 요소를 인라인 요소로 변경</h4>
+    <pre><b>>> display: inline 테스트</b></pre>
+    <pre>
+        인라인 요소로 변경되면서 width와 height 속성이 무시된다.
+        - inline(줄 내부)에 표기한다 == 글자 처럼 취급
+        - width와 height는 내용(content) 영역의 크기를 설정하는 속성
+        -> inline 형식의 요소는 width와 height 속성이 적용되지 않는다.
+    </pre>
+    <div class="block block-test1 area1">첫 번째 영역</div>
+    <div class="block block-test1 area2">두 번째 영역</div>
+    <div class="block block-test1 area3">세 번째 영역</div>
+    <div class="block block-test1 area4">네 번째 영역</div>
+    <div class="block block-test1 area5">다섯 번째 영역</div>
+
+    <hr>
+    <h4>블럭 요소를 인라인 블럭 요소로 변경</h4>
+    <pre><b>>> display: inline-block 테스트</b></pre>
+    <pre>
+            영역은 인라인 요소로 변경(가로 배치)되지만
+    내용은 블럭 요소가 되어 width와 height 속성을 설정할 수 있다.
+    (요소간에 작은 간격이 존재)
+    </pre>
+    <div class="block block-test2 area1">첫 번째 영역</div>
+    <div class="block block-test2 area2">두 번째 영역</div>
+    <div class="block block-test2 area3">세 번째 영역</div>
+    <div class="block block-test2 area4">네 번째 영역</div>
+    <div class="block block-test2 area5">다섯 번째 영역</div>
+
+    <h4>인라인 요소를 블럭 요소로 변경</h4>
+    <pre><b>>> display: block 테스트</b></pre>
+    <pre>
+    인라인 요소를 블럭 요소로 변경하면 width와 height값을 지정할 수 있고
+    세로로 쌓인다.
+    </pre>
+    <span class="block block-test3 area1">첫 번째 영역</span>
+    <span class="block block-test3 area2">두 번째 영역</span>
+    <span class="block block-test3 area3">세 번째 영역</span>
+    <span class="block block-test3 area4">네 번째 영역</span>
+    <span class="block block-test3 area5">다섯 번째 영역</span>
+    <p>나 글이야~~</p>
+
+
+</body>
+</html>

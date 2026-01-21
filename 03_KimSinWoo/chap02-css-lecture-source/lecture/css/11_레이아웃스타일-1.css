@@ -1,0 +1,56 @@
+/* width / height */
+.size-test {
+    border: 2px solid red;
+}
+
+#test1 {
+    width: 800px;
+    height: 200px;
+}
+
+#test2 {
+    width: 80%;
+    height: 200px;
+}
+
+.block {
+    width: 150px;
+    height: 130px;
+    border: 1px solid black;
+    color: white;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.area1 {background: red}
+.area2 {background: orange}
+.area3 {background: yellow}
+.area4 {background: green}
+.area5 {background: blue}
+
+/* inline test */
+.block-test1 {
+    display: inline;
+    /* inline
+        - 가로배치
+        - width/height 적용 X
+        - padding, margin은 적용 된
+    */
+}
+
+/* inline-block 테스트 */
+.block-test2 {
+    display: inline-block;
+    margin-left: -5px; /* 요소 사이의 공백을 커버하기 위해서 작성 */
+}
+
+/* block test */
+.block-test3 {
+    display: block;
+}
+
+/* display:none & visibility: hidden */
+body > span.block.block-test3.area5 {
+    /*visibility: hidden; !* 공간을 차지하고 있음 *!*/
+    display: none; /* 화면에 표시 안함 -> 공간도 차지하지 않음 */
+}

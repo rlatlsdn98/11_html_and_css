@@ -1,0 +1,121 @@
+/* flex 예제에서 공통적으로 사용할 스타일 지정 */
+div {
+    border: 1px solid black;
+    box-sizing: border-box;
+    /* content + padding + border == width/height
+        -> content 조절
+    */
+}
+
+pre {
+    font-size: 1rem;
+    font-family: '고딕';
+}
+
+pre > b {
+    font-size: 1.5em;
+    color: red;
+}
+
+pre > i {
+    font-size: 1.5em;
+}
+
+.item {
+    width: 75px;
+    height: 75px;
+}
+
+.item1 {
+    background-color: red;
+}
+
+.item2 {
+    background-color: orangered;
+}
+
+.item3 {
+    background-color: orange;
+}
+
+.item4 {
+    background-color: yellow;
+}
+
+.item5 {
+    background-color: yellowgreen;
+}
+
+.item6 {
+    background-color: green;
+}
+
+.item7 {
+    background-color: lightblue;
+}
+
+.item8 {
+    background-color: blue;
+}
+
+.item9 {
+    background-color: violet;
+}
+
+.flex-container {
+    height: 700px;
+    background: #dddddd;
+
+    /* 현재 요소를 flex-container로 지정 */
+    display: flex;
+
+    /* 중심축의 방향, 시작/끝 지정 */
+    flex-direction: row;
+
+    /* 중심축 방향을 기준으로 item 정렬 */
+    /*justify-content: flex-start;*/
+    /*justify-content: flex-end;*/
+    /*justify-content: center;*/
+    justify-content: space-around;
+    justify-content: space-between;
+    justify-content: space-evenly;
+
+    /* 교차축을 기준으로 item 정렬 */
+    align-items: flex-start;
+    align-items: flex-end;
+    align-items: center;
+    align-items: stretch; /* 기본값 */
+    align-items: baseline;
+}
+
+.item2 {
+    padding: 5px;
+}
+
+.item3 {
+    padding: 10px;
+}
+
+.item4 {
+    padding: 15px;
+}
+
+.item5 {
+    padding: 20px;
+}
+
+.container {
+    width: 400px;
+    height: 400px;
+    box-sizing: border-box;
+    border: 3px solid black;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container > .item {
+    width: 50%;
+    height: 50%;
+    border: 3px solid black;
+}

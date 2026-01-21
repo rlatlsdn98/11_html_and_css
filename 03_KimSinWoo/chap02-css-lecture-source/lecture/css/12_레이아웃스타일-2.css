@@ -1,0 +1,124 @@
+.test {
+    background: yellow;
+    width: 100px;
+    height: 100px;
+}
+
+.test1 {
+    padding: 100px;
+    padding: 100px 50px;
+    /* 값 3개 : 상, 좌우, 하 */
+    padding: 50px 100px 75px;
+    /* 값 4개: 상 우 하 좌  */
+    padding: 25px 50px 75px 100px
+}
+
+.test2 {
+    padding-top: 50px;
+    padding-left: 100px;
+}
+
+/* margin: 요소들 사이의 여백 */
+.test3 {
+    margin: 50px;
+}
+
+.test4 {
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.test5 {
+    /* 요소를 가운데 정렬 시킬 수 있도록
+    자동으로 margin을 조정하는 값.
+    (단, 기본적으로 가로 가운데 정렬) */
+    margin: auto;
+}
+
+/* 영역 분할 */
+.container {
+    border: 3px solid red;
+    width: 500px;
+    height: 737px;
+}
+
+.container > .row-1 {
+    /* box-sizing
+        - width / height가 적용되는 영역 지정
+        - content-box: 기본값
+            - width/height가 적용되는 영역을 content로 지정
+        - border-box
+            - width/height가 적용되는 영역을 content + padding + border의 합으로 지정
+            단, content = 지정된 크기 - (padding + border)
+    */
+    box-sizing: border-box;
+
+    width: 100%;
+    height: 50%;
+    border: 20px solid green;
+}
+
+.container > .row-1:first-child {
+    background-color: pink;
+}
+
+.container > .row-1:last-child {
+    background-color: gray;
+}
+
+
+.container > .A-1 {
+    /* box-sizing
+        - width / height가 적용되는 영역 지정
+        - content-box: 기본값
+            - width/height가 적용되는 영역을 content로 지정
+        - border-box
+            - width/height가 적용되는 영역을 content + padding + border의 합으로 지정
+            단, content = 지정된 크기 - (padding + border)
+    */
+    box-sizing: border-box;
+    border: 3px solid red;
+}
+
+.container > .A-1.Q {
+    background-color: blue;
+    height: 10%;
+}
+
+.container > .A-1.W {
+    background-color: violet;
+    height: 20%;
+}
+
+.container > .A-1.E {
+    background-color: purple;
+    height: 30%;
+}
+
+.container > .A-1.R {
+    background-color: aquamarine;
+    height: 40%;
+}
+
+/* 좌우 2분할 */
+.container-2 {
+    width: 600px;
+    height: 300px;
+    border:3px solid red;
+}
+
+.col-1 {
+    box-sizing: border-box;
+    border: 1px solid black;
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+}
+
+.col-1:nth-child(1){
+    background: gold;
+}
+.col-1:nth-child(2){
+    background: silver;
+    margin-left: -4.3px;
+}
